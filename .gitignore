@@ -9,4 +9,3 @@ cache
 artifacts
 package.json
 package-lock.json
-hardhat.config.js
