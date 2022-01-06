@@ -43,7 +43,7 @@ contract SoladayRNG is VRFConsumerBase {
         )
     {
         keyHash = 0x6c3699283bda56ad74f6b855546325b68d482e983852a7a82979cc4807b641f4;
-        fee = 0.1 * 10 ** 18; // 0.1 LINK (Varies by network)
+        fee = 0.1 * 10 ** 18; 
     }
     
     /** 
@@ -58,7 +58,7 @@ contract SoladayRNG is VRFConsumerBase {
      * Callback function used by VRF Coordinator
      */
     function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {
-        randomResult = (randomness & 0xA);
+        randomResult = randomness;
     }
 
     // function withdrawLink() external {} - Implement a withdraw function to avoid locking your LINK in the contract
